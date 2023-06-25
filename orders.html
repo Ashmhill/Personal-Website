@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="site-plan.html" target="_blank">Site Plan</a>
+    <div id="content">
+        <header>
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.png" alt="Darling Donuts Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="orders.html">Order Now</a>
+                <a href="contactus.html">Contact Us</a>
+                <a href="site-plan.html">Site Plan</a>
+            </nav>
+        </header>
+        <body>
+        <div id="orders"></div>
+        <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+                <label for="shipping">Shipping:</label>
+                    <input type="radio">Express</input><input type="radio">Priority</input><input type="radio">First Class</input><input type="radio">Normal</input>
+            </li>
+            <li>
+                <label for="frosting">Frosting:</label>
+                    <input type="radio">Maple</input><input type="radio">Vanilla</input><input type="radio">Carmel</input><input type="radio">Chocolate</input>
+            </li>
+            <li>
+                <label for="msg">How do you want your donuts to look (ex.Color,Setup,ect.):</label>
+            </li>
+            <li>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <li>
+                <label for="frosting">Toppings:</label>
+                <input type="radio">Chocolate Chips</input><input type="radio">Bacon</input><input type="radio">Rainbow</input><input type="radio">Sea Salt</input><input type="radio">Reese's Pieces</input><input type="radio">Raspberry</input><input type="radio">Oreo</input><input type="radio">Chocolate Candy Bar</input><input type="radio">Chocolate Sprinkles</input>
+            </li>
+            <li>
+                <label for="msg">Notes:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
+        </ul>
+    </form>
+<script>
+// get the feedback div element so we can do something with it.
+const feedbackElement = document.getElementById('feedback');
+// get the form so we can read what was entered in it.
+const formElement = document.forms[0];
+// add a 'listener' to wait for a submission of our form. When that happens run the code below.
+formElement.addEventListener('submit', function(e) {
+    // stop the form from doing the default action.
+    e.preventDefault();
+    // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+    feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+    // make the feedback element visible.
+    feedbackElement.style.display = "block";
+    // add a class to move everything down so our message doesn't cover it.
+    document.body.classList.toggle('moveDown');
+});
+</script>
+        <div id="image">
+            <div id="hero-box">
+                <img id="img-1" src="images/Donuts3.jpg" alt="Donuts">  
+            </div>
+        </div>
+        <div id="text">
+            <p>About us - Hi and Welcome to the About our Company page. Darling Donuts was started in 2013 by two Sisters, Claire and Ashley. They have always loved donuts and are very creative. They originally just made a tie dye donut tower for their brothers birthday but when requests started coming in for others specials occasions, Darling Donuts was born. Today, we have made hundreds of amazing creations together and hope to make many more for all those special events in everyones lives.</p>
+        </div>
+        <footer>
+            <p>Darling Donuts &copy; 20XX - Ashley Hillstead</p>
+            <p><a href="site-plan-rafting.html">Site Plan</a></p>
+            <p><a href="contactus.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+            <img id="img-2" src="images/Donuts4.jpg" alt="Donuts 2">
+        </footer>
+    </div>
+</body>
+</html>
