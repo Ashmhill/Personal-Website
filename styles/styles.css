@@ -18,7 +18,7 @@ nav a {
     color:#f18aaf;
     background-color: #fffbf2;
     text-decoration: none;
-    font-family: Rubik;
+    font-family: Julius Sans One;
     padding: 35px;
 }
 #hero-msg h1, #hero-msg h4 {
@@ -51,7 +51,7 @@ header {
 nav a:hover {
     background-color: #f8cb8a;
     color:#fff;
-    font-family: Rubik;
+    font-family: Julius Sans One;
 }
 .book, .join {
     background-color: #e8b56b;
